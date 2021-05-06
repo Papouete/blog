@@ -20,7 +20,7 @@ category_id -> categories.id
 
 ## Création du site
 
-Démo : [Lien vers le blog](http://cedricleclinche.sites.3wa.io/blog/src/index.php)
+Démo : [Lien vers le blog](https://florianmor.sites.3wa.io/DEV/php/m01/exercices/blog_flo/index.php)
 
 ### Fonctionnalités attendues
 
