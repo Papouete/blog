@@ -1,0 +1,13 @@
+<h1>Modifier l'article</h1>
+
+<form method="post">
+    <fieldset>
+        <label for="title">Titre:</label><br>
+          <input type="text" id="title" name="modif_title" value="<?= $article['title'] ?>"><br>
+          
+        <label for="content">Contenu:</label><br>
+          <textarea id="content" name="modif_content" rows="8" cols="60"><?= $article['content'] ?></textarea>
+
+        <button type="submit" value="Submit">Enregistrer</button> 
+    </fieldset>
+</form>

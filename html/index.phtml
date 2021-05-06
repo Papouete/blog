@@ -1,0 +1,26 @@
+<h1>Page d'accueil</h1>
+
+<p>Liste des articles</p>
+<div>
+    <h2>Categories</h2>
+        <?php foreach ($categorys as $category): ?>
+        <li><a href="categorie.php?id=<?= $category['ID'] ?>"><?= $category['name'] ?>(<?= $category['nbArt'] ?>)</a></li>
+        <?php endforeach ?>
+</div>
+
+<div>
+    <?php foreach ($articles as $article): ?>
+        <h2><a href="articles.php?title=<?= $article['title'] ?>"><?= $article['title'] ?></a></h2>
+        <p>Article rédigé par <?= $article['firstname'] ?> <?= $article['lastname'] ?></p>
+        <p> Créé le : <?= $article['creation_date'] ?></p>
+        <p><?= $article['content'] ?></p>
+    <?php endforeach ?>
+</div>
+
+<nav>
+    <ul>
+        <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+            <li><a href="?page=<?= $i ?>"><?= $i ?></a></li>
+        <?php endfor ?>
+    </ul>
+</nav>

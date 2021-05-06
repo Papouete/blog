@@ -1,0 +1,36 @@
+<h1>Details de l'article</h1>
+
+<div>
+    <h2><?= $article['title'] ?></h2>
+    <p><?= $article['content'] ?></p>
+    <p>Rédigé par <?= $article['firstname'] ?> <?= $article['lastname'] ?>, le <?= $article['creation_date'] ?></p>
+    <hr>
+    
+    <?php foreach ($comments as $comment): ?>
+        <h3>Commentaires</h3>
+            <p><?= $comment['content'] ?></p>
+            <p> Rédigé par : <?= $comment['username'] ?></p>
+            <p>le : <?= $comment['creation_date'] ?></p>
+    <?php endforeach ?>
+    
+    
+    <h2>Nouveau commentaire</h2>
+    
+    <form action="articles.php?title=<?= $article['title'] ?>" method="post">
+        <fieldset>
+            
+            <label for="pseudo">Pseudo :</label><br>
+              <input type="text" id="pseudo" name="pseudo"><br>
+              
+            <label for="comentaire">Commentaire :</label><br>
+              <textarea type="text" id="comentaire" name="comentaire" rows="8" cols="60"></textarea>
+              <br>
+            
+            <button type="submit" value="Submit">Ajouter</button> 
+            <input type="hidden" name="POSTid" value="<?= $article['POSTid'] ?>">
+            
+        </fieldset>
+    </form>
+
+</div>
+

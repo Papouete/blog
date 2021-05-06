@@ -1,0 +1,40 @@
+<h1>Administration</h1>
+
+<p><a href="new_article.php?">Rédiger un nouvel article</a></p>
+
+
+<?php foreach ($articles as $article): ?>
+        <table>
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Détail article</th>
+                    <th>Catégorie</th>
+                    <th>Rédacteur</th>
+                    <th>Ecrit le</th>
+                    <th>Supprimer</th>
+                    <th>Modifier</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><?= $article['title'] ?></td>
+                <td><?= $article['content'] ?></td>
+                <td><?= $article['name'] ?></td>
+                <td><?= $article['firstname'] ?> <?= $article['lastname'] ?></td>
+                <td><?= $article['creation_date'] ?></td>
+                <form action="admin.php" method="post">
+                    <input type="hidden" name="sup" value="<?= $article['title'] ?>">
+                    <td>
+                        <button type="submit" value="Submit"><i class="fas fa-dumpster"></i></button>
+                    </td>
+                </form>
+                    <td>
+                        <button>
+                            <a href="edit_article.php?thisID=<?= $article['POSTid'] ?>"><i class="fas fa-pencil-alt"></i></a>
+                        </button>
+                    </td>
+            </tr>
+            </tbody>
+        </table>
+<?php endforeach ?>
