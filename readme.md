@@ -31,7 +31,7 @@ Démo : [Lien vers le blog](https://florianmor.sites.3wa.io/DEV/php/m01/exercice
 * Créer un nouveau commentaire
 * Modifier un article existant
 * Supprimer un article
-* 
+
 ### Connexion/Inscription
 
 * Créer dans la table des utilisateurs 2 nouvelles colonnes: email, password
