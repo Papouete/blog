@@ -39,7 +39,7 @@ email : varchar(100) - cocher la case "null"
 password: varchar(60) - cocher la case "null"
 * Créer une page login.php et register.php ainsi que 2 templates login.phtml et register.phtml
 * Créer les formulaires d'inscription et de connexion sur les templates
-* 
+
 Inscription:
 email
 mot de passe
